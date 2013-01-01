@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
              << "My node-id is " << gaServices.clusterNodeid() << std::endl;
 
    int ndim=1;
-   int dims[]={5};
+   int dims[]={500};
    char* arrayName = "array_name";
    boost::shared_ptr<GA::GlobalArray> ptrGA(new GA::GlobalArray(MT_C_DBL, ndim, dims, arrayName, NULL));
    GA::Terminate();
