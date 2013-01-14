@@ -20,7 +20,7 @@ london08
 london08
 london08
 
-$ mpirun -machinefile nodes -np 8 boost.mpi-ga++-2.out
+$ mpirun -machinefile nodes -np 8 boost.mpi-ga++.out
 
  I am process 7 of 8. My node-id is 1
  I am process 1 of 8. My node-id is 0
