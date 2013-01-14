@@ -22,8 +22,7 @@ int main(int argc, char* argv[])
       boost::shared_ptr<GA::GlobalArray> ptrGA(new GA::GlobalArray(MT_C_DBL, ndim, dims, arrayName, NULL));
       ptrGA->zero();
 
-      gaServices.initFence();
-      if(world.rank() == 3){
+      if(world.rank() == 2){
          int lo[] = {4};
          int hi[] ={12};
          double local3[20];
@@ -32,9 +31,9 @@ int main(int argc, char* argv[])
          }
          ptrGA->put(lo, hi, local3, NULL);
       }
-      gaServices.fence();
+      gaServices.sync();
       
-      if(world.rank() == 4){
+      if(world.rank() == 7){
          int lo[] = {0};
          int hi[] ={49};
          double local4[50];
